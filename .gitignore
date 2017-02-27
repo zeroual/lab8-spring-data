@@ -1,0 +1,7 @@
+###### Please add here any file you dont want to commit it #########
+
+#idea files
+.idea
+*.iml
+
+target
