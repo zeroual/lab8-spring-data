@@ -12,6 +12,8 @@ public class PublicationServiceImplTest {
 
     @Test
     public void shouldAddPost() {
+        System.setProperty("spring.profiles.active","DEV");
+
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 
         PublicationService publicationService = applicationContext.getBean("publicationService", PublicationService.class);
