@@ -1,4 +1,4 @@
-package com.polytech.pnet;
+package com.polytech.pnet.models;
 
 public class Post {
 

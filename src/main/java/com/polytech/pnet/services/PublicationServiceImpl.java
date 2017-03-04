@@ -1,9 +1,10 @@
-package com.polytech.pnet;
+package com.polytech.pnet.services;
 
-import org.springframework.stereotype.Component;
+import com.polytech.pnet.models.Post;
+import com.polytech.pnet.repositories.PostRepository;
+import org.springframework.stereotype.Service;
 
-@Component
-//@Service i prefer use @Service here because give the semantic that my Component is a service
+@Service
 public class PublicationServiceImpl implements PublicationService {
 
     private PostRepository postRepository;

@@ -1,4 +1,4 @@
-package com.polytech.pnet;
+package com.polytech.pnet.configs;
 
 import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
