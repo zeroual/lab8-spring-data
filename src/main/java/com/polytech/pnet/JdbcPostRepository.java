@@ -1,15 +1,23 @@
 package com.polytech.pnet;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
+// @Repository use this instead of @Component
 public class JdbcPostRepository implements PostRepository {
 
     private final Connection connection;
 
-    public JdbcPostRepository(Connection connection) {
-        this.connection = connection;
+    @Autowired
+    public JdbcPostRepository(DataSource dataSource) throws SQLException {
+
+        this.connection = dataSource.getConnection();
     }
 
     public Post save(Post post) {

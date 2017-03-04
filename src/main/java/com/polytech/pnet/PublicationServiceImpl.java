@@ -1,5 +1,9 @@
 package com.polytech.pnet;
 
+import org.springframework.stereotype.Component;
+
+@Component
+//@Service i prefer use @Service here because give the semantic that my Component is a service
 public class PublicationServiceImpl implements PublicationService {
 
     private PostRepository postRepository;

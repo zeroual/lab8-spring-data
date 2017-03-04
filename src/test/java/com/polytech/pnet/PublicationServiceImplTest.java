@@ -16,11 +16,11 @@ public class PublicationServiceImplTest {
 
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 
-        PublicationService publicationService = applicationContext.getBean("publicationService", PublicationService.class);
+        PublicationService publicationService = applicationContext.getBean(PublicationService.class);
 
         publicationService.post(new Post("Hi Polytech"));
 
-        PostRepository postRepository = applicationContext.getBean("postRepository", PostRepository.class);
+        PostRepository postRepository = applicationContext.getBean(PostRepository.class);
 
         List<Post> allPost = postRepository.findAll();
         Assertions.assertThat(allPost).hasSize(1);

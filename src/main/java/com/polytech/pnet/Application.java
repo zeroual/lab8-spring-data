@@ -13,7 +13,7 @@ public class Application {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 
         // get the bean based with his id (by default is method name)
-        PublicationService publicationService = applicationContext.getBean("publicationService", PublicationService.class);
+        PublicationService publicationService = applicationContext.getBean(PublicationService.class);
 
         //use the publication service
         publicationService.post(new Post("Hi Polytech"));
