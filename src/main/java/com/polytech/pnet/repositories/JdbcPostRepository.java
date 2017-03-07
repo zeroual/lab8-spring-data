@@ -46,4 +46,21 @@ public class JdbcPostRepository implements PostRepository {
         }
         return postList;
     }
+
+    public Post findOne(Long id) {
+        try {
+            PreparedStatement statement = connection.prepareStatement("SELECT id,content FROM POST WHERE id=?");
+            statement.setLong(1, id);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                Post post = new Post(resultSet.getString("CONTENT"));
+                post.setId(resultSet.getLong("id"));
+                return post;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Ooops npet can't create connection statement", e);
+        }
+
+        return null;
+    }
 }

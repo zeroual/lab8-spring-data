@@ -8,4 +8,6 @@ public interface PostRepository {
     Post save(Post post);
 
     List<Post> findAll();
+
+    Post findOne(Long id);
 }

@@ -4,6 +4,8 @@ import com.polytech.pnet.models.Post;
 import com.polytech.pnet.repositories.PostRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PublicationServiceImpl implements PublicationService {
 
@@ -16,4 +18,5 @@ public class PublicationServiceImpl implements PublicationService {
     public Post post(Post post) {
         return postRepository.save(post);
     }
+
 }
