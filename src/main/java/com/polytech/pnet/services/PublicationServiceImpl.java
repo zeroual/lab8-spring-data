@@ -2,6 +2,7 @@ package com.polytech.pnet.services;
 
 import com.polytech.pnet.models.Post;
 import com.polytech.pnet.repositories.PostRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,6 +12,7 @@ public class PublicationServiceImpl implements PublicationService {
 
     private PostRepository postRepository;
 
+    @Autowired
     public PublicationServiceImpl(PostRepository postRepository) {
         this.postRepository = postRepository;
     }
